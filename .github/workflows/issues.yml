@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Output event details
         run: |
-          echo "Issue Action: ${{ toJson(github.event) }}"
+          echo "Issue Action: ${{ github.event.action }}"
           echo "Issue Title: ${{ github.event.issue.title }}"
           echo "Issue Body: ${{ github.event.issue.body }}"
           echo "Issue URL: ${{ github.event.issue.html_url }}"
